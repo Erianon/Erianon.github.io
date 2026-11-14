@@ -1,77 +1,135 @@
 <!DOCTYPE html>
-<html>
-<head>  
-<title>Erianon的个人网页</title>
-  <style>
-    body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        background-color: #f4f4f9; 
-        color: #333333; 
-        line-height: 1.6; 
-        margin: 0;
-        padding: 0;
-    }
-    main, header, footer {
-        max-width: 800px;
-        margin: 0 auto; 
-        padding: 20px;
-    }
-    header {
-        background-color: #2c3e50; 
-        color: white; 
-        text-align: center;
-        margin-top: 20px;
-        border-radius: 8px; 
-    }
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eriamon 的个人主页</title>
+    <style>
+        /* 1. 基础设置：去掉默认边距，设置字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
 
-    
-    h1 {
-        margin-bottom: 10px;
-    }
-    h2 {
-        color: #2980b9; 
-        border-bottom: 2px solid #2980b9;
-        padding-bottom: 5px;
-    }
+        /* 2. 整体页面背景（全屏背景图） */
+        body {
+            /* 这里替换成你想要的风景图链接，或者本地图片，比如 url('background.jpg') */
+            background-image: url('background.jpg');
+            background-size: cover; /* 让背景图铺满 */
+            background-position: center; /* 图片居中 */
+            background-attachment: fixed; /* 背景固定，不随滚动条滚动 */
+            min-height: 100vh; /* 最小高度为屏幕高度 */
+            display: flex;
+            flex-direction: column; /* 垂直排列内容 */
+        }
 
-    a {
-        color: #e74c3c; 
-        text-decoration: none; 
-    }
-    a:hover {
-        text-decoration: underline; 
-    }
+        /* 3. 顶部导航栏 */
+        nav {
+            background-color: rgba(42, 78, 115, 0.9); /* 深蓝色半透明背景 */
+            padding: 20px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-evenly; /* 导航项均匀分布 */
+            list-style: none;
+            max-width: 800px; /* 限制导航栏最大宽度 */
+            margin: 0 auto; /* 居中 */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #f0a500; /* 鼠标悬停变色 */
+        }
 
-    footer {
-        text-align: center;
-        color: #888;
-        font-size: 0.9em;
-        margin-top: 40px;
-    }
-</style>
+        /* 4. 中间主体内容区 */
+        main {
+            flex: 1; /* 占据剩余的所有空间 */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 水平居中 */
+            justify-content: center; /* 垂直居中 */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 圆形头像 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* 变成圆形 */
+            border: 3px solid white; /* 白色边框 */
+            object-fit: cover; /* 保证图片不变形 */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 加点阴影更立体 */
+        }
+
+        /* 头像下方的简介文字 */
+        .intro-text {
+            color: white;
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* 文字阴影，防止背景太亮看不清 */
+        }
+
+        /* 5. 毛玻璃效果框 */
+        .glass-box {
+            background-color: rgba(255, 255, 255, 0.15); /* 半透明白色背景 */
+            border: 1px solid rgba(255, 255, 255, 0.6); /* 半透明白色边框 */
+            backdrop-filter: blur(5px); /* 毛玻璃模糊效果（高级功能） */
+            padding: 30px;
+            border-radius: 8px; /* 圆角 */
+            max-width: 700px;
+            color: white;
+            font-size: 13px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        /* 6. 底部版权栏 */
+        footer {
+            background-color: rgba(42, 78, 115, 0.9); /* 和导航栏同色 */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 12px;
+        }
+    </style>
 </head>
-<body style="background-image: url('background.jpg'); background-size: cover; background-attachment: fixed;">
-<p>11月12日，这是我的第一个个人网页</h>  
-<p>maybe not today,may not tommorrow</p>  
-<p>don't look back in anger</p>
-<p>点击这里，访问我的<a href="https://github.com/Erianon" target="_blank">Github 主页</a></p>
-  <header>
-    <h1>Erianon 的个人主页</h1>
-  </header>
-  <main>
-      <section>
-      <h2><strong>关于我</strong></h2>
-      <p>Webcoding 初学者<br>
-        程序小白，笨拙地学习后端知识<br>
-        放生了前额叶，我觉得它是有生命的，不应该在<br>
-        我的脑子里，这片叶子应该有属于他更广阔的大树<br>
-        再说脑袋里长叶子不是给我添乱吗<br>
-         </p>  
-    </section>
-  <section>
-    <h2>我的项目</h2>
-    <p><img src="棍木.jpg" alt=" " width="150" style="bprder-radius: 8px;"></p>
-  </section>
-  </main>
+<body>
+
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">我的生活</a></li>
+            <li><a href="#">我的文章</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容 -->
+    <main>
+        <!-- 头像：你需要把这里的 src 换成你自己的头像图片 -->
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Eriamon" alt="我的头像" class="avatar">
+        
+        <!-- 简介文字 -->
+        <p class="intro-text">
+            这里写一些自我介绍：心中有梦，梦里自由作伴，肆意行走，向着天涯海角，向着山巅云海……赏尽花开花落，看毕云卷云舒，不负今生大好年华。作品视角独特，将车、人，自然很好地融合在一起，很好地契合了本次大赛的主题和精神。
+        </p>
+
+        <!-- 毛玻璃文字框 -->
+        <div class="glass-box">
+            这里是感谢无尽的旷野，天地相连，银河从天而降，贯穿灿烂星空。当乌云试图吞没美丽，当荒芜试图带来恐惧，天使在这一刻降临世间，她手中的光明之源，让星空变得璀璨、神秘，让大地变得广阔、坚实。星空拍摄为当前热门拍摄内容，作者加入人物，使整张照片显得很饱满而充实。
+        </div>
+    </main>
+
+
 </body>
 </html>

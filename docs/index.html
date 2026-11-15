@@ -24,15 +24,15 @@
 
     
         nav {
-            background-color: rgba(42, 78, 115, 0.9); /* 深蓝色半透明背景 */
+            background-color: rgba(42, 78, 115, 0.9); 
             padding: 20px 0;
         }
         nav ul {
             display: flex;
-            justify-content: space-evenly; /* 导航项均匀分布 */
+            justify-content: space-evenly; 
             list-style: none;
-            max-width: 800px; /* 限制导航栏最大宽度 */
-            margin: 0 auto; /* 居中 */
+            max-width: 800px; 
+            margin: 0 auto; 
         }
         nav a {
             color: white;
@@ -40,48 +40,47 @@
             font-size: 16px;
         }
         nav a:hover {
-            color: #f0a500; /* 鼠标悬停变色 */
+            color: #f0a500; 
         }
 
-        /* 4. 中间主体内容区 */
+        
         main {
-            flex: 1; /* 占据剩余的所有空间 */
+            flex: 1; 
             display: flex;
             flex-direction: column;
-            align-items: center; /* 水平居中 */
-            justify-content: center; /* 垂直居中 */
+            align-items: center; 
+            justify-content: center; 
             padding: 40px 20px;
             text-align: center;
         }
 
-        /* 圆形头像 */
+        
         .avatar {
             width: 120px;
             height: 120px;
-            border-radius: 50%; /* 变成圆形 */
-            border: 3px solid white; /* 白色边框 */
-            object-fit: cover; /* 保证图片不变形 */
+            border-radius: 50%; 
+            border: 3px solid white; 
+            object-fit: cover; 
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* 加点阴影更立体 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
         }
 
-        /* 头像下方的简介文字 */
+        
         .intro-text {
             color: white;
             font-size: 14px;
             line-height: 1.8;
             max-width: 700px;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* 文字阴影，防止背景太亮看不清 */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
         }
 
-        /* 5. 毛玻璃效果框 */
         .glass-box {
-            background-color: rgba(255, 255, 255, 0.15); /* 半透明白色背景 */
-            border: 1px solid rgba(255, 255, 255, 0.6); /* 半透明白色边框 */
-            backdrop-filter: blur(5px); /* 毛玻璃模糊效果（高级功能） */
+            background-color: rgba(255, 255, 255, 0.15); 
+            border: 1px solid rgba(255, 255, 255, 0.6); 
+            backdrop-filter: blur(5px); 
             padding: 30px;
-            border-radius: 8px; /* 圆角 */
+            border-radius: 8px; 
             max-width: 700px;
             color: white;
             font-size: 13px;
@@ -89,9 +88,8 @@
             text-align: left;
         }
 
-        /* 6. 底部版权栏 */
         footer {
-            background-color: rgba(42, 78, 115, 0.9); /* 和导航栏同色 */
+            background-color: rgba(42, 78, 115, 0.9); 
             color: white;
             text-align: center;
             padding: 15px 0;
@@ -101,7 +99,6 @@
 </head>
 <body>
 
-    <!-- 导航栏 -->
     <nav>
         <ul>
             <li><a href="#">首页</a></li>
@@ -115,12 +112,10 @@
         
         <img src="头像.jpg" alt="我的头像" class="avatar">
         
-        <!-- 简介文字 -->
         <p class="intro-text">
             every song has a sequel,every dream has a part two
         </p>
 
-        <!-- 毛玻璃文字框 -->
         <div class="glass-box">
             maybe not today,maybe not tomorrow,but oneday don't look back in anger
         </div>
